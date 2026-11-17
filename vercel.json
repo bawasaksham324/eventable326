@@ -1,0 +1,28 @@
+{
+  "rewrites": [
+    {
+      "source": "/ticket/:token*",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/dashboard",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/auth",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/bookings",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/admin",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/experience/:path*",
+      "destination": "/index.html"
+    }
+  ]
+}
