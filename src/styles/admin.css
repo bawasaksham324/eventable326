@@ -1,0 +1,162 @@
+.admin-page {
+  position: relative;
+  z-index: 2;
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 8rem 5vw 5rem;
+}
+
+.admin-heading, .admin-panel-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.admin-metrics {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1px;
+  margin: 3rem 0;
+  background: rgba(255,255,255,.15);
+}
+
+.admin-metrics article, .admin-panel {
+  padding: 1.4rem;
+  background: rgba(10, 8, 12, .82);
+  border: 1px solid rgba(255,255,255,.1);
+}
+
+.admin-metrics small, .admin-inventory small, .admin-booking-row span {
+  display: block;
+  color: var(--muted);
+  font: .68rem var(--mono);
+  letter-spacing: .08em;
+}
+
+.admin-metrics strong {
+  display: block;
+  margin-top: .6rem;
+  color: var(--purple);
+  font: 2rem var(--display);
+}
+
+.admin-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.admin-panel h2 { margin: .4rem 0 1.5rem; }
+.admin-filter-row { display: flex; flex-wrap: wrap; gap: .6rem; justify-content: flex-end; }
+.admin-search, .admin-verify-form input {
+  min-width: 16rem;
+  padding: .8rem 1rem;
+  color: inherit;
+  background: rgba(255,255,255,.06);
+  border: 1px solid rgba(255,255,255,.2);
+}
+
+.admin-filter-row input,
+.admin-filter-row select {
+  min-width: 10rem;
+  padding: .8rem 1rem;
+  color: var(--text);
+  background: #12090c;
+  border: 1px solid rgba(255,255,255,.2);
+}
+
+.admin-filter-row select option {
+  color: var(--text);
+  background: #12090c;
+}
+
+.restaurant-admin-panel { margin-top: 1rem; }
+.restaurant-admin-metrics { margin: 1.5rem 0; }
+.restaurant-reservation-row strong { max-width: 760px; }
+
+.admin-booking-row, .admin-inventory > div {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem 0;
+  border-top: 1px solid rgba(255,255,255,.1);
+}
+
+.admin-booking-row strong, .admin-booking-row span { display: block; margin-top: .3rem; }
+.admin-booking-row code { color: var(--purple); font-size: .7rem; }
+.admin-booking-row em { color: var(--purple); font: .7rem var(--mono); }
+.admin-booking-actions { display: flex; flex-direction: column; align-items: flex-end; gap: .6rem; }
+.admin-verify-form { display: flex; gap: .6rem; }
+.admin-ticket-result { margin-top: 1.5rem; }
+
+@media (max-width: 800px) {
+  .admin-page { padding-top: 6rem; }
+  .admin-heading, .admin-panel-head { flex-direction: column; }
+  .admin-metrics { grid-template-columns: repeat(2, 1fr); }
+  .admin-grid { grid-template-columns: 1fr; }
+  .admin-search { min-width: 0; width: 100%; }
+  .admin-filter-row { width: 100%; justify-content: stretch; }
+  .admin-filter-row input, .admin-filter-row select { min-width: 0; flex: 1 1 12rem; }
+}
+
+.public-ticket-page {
+  position: relative;
+  z-index: 2;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  color: #f3eceb;
+  background: radial-gradient(circle at 50% 10%, rgba(143, 18, 35, .22), transparent 38%);
+}
+
+.public-ticket-shell { width: min(100%, 520px); }
+.ticket-public-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; }
+.ticket-mark { margin: 0; color: #d3a6aa; font: .7rem var(--mono); letter-spacing: .16em; }
+.ticket-live-dot { width: .55rem; height: .55rem; border-radius: 50%; background: #e23b50; box-shadow: 0 0 18px rgba(226, 59, 80, .9); }
+.public-ticket-card {
+  position: relative;
+  overflow: hidden;
+  padding: 1.4rem;
+  border: 1px solid rgba(226, 59, 80, .6);
+  background: linear-gradient(160deg, rgba(42, 10, 17, .98), rgba(10, 6, 9, .98));
+  box-shadow: 0 24px 80px rgba(0, 0, 0, .55), 0 0 38px rgba(143, 18, 35, .2);
+}
+.public-ticket-card::before, .public-ticket-card::after { content: ''; position: absolute; width: 14px; height: 14px; border: 1px solid #e23b50; }
+.public-ticket-card::before { top: 12px; left: 12px; border-right: 0; border-bottom: 0; }
+.public-ticket-card::after { right: 12px; bottom: 12px; border-left: 0; border-top: 0; }
+.ticket-card-top { display: flex; justify-content: space-between; align-items: center; gap: 1rem; }
+.ticket-card-top .eyebrow { margin-bottom: 0; color: #d77984; }
+.public-status { padding: .35rem .5rem; border: 1px solid currentColor; font: .62rem var(--mono); letter-spacing: .1em; }
+.public-ticket-card h1 { margin: 3rem 0 .4rem; color: #fff3f1; font-size: clamp(2.6rem, 12vw, 5rem); line-height: .88; text-transform: uppercase; }
+.ticket-occasion { color: #e23b50; font: .65rem var(--mono); letter-spacing: .15em; }
+.ticket-rule { height: 1px; margin: 2rem 0 1.5rem; background: linear-gradient(90deg, transparent, #b83d4d, transparent); }
+.public-ticket-details { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.4rem 1rem; }
+.public-ticket-details div { display: grid; gap: .35rem; }
+.public-ticket-details small { color: #b97882; font: .58rem var(--mono); letter-spacing: .12em; }
+.public-ticket-details strong { color: #fff3f1; font-size: .92rem; }
+.public-ticket-details span { color: #bca4a7; font-size: .7rem; overflow-wrap: anywhere; }
+.ticket-card-footer { display: flex; justify-content: space-between; gap: 1rem; margin-top: 2rem; padding-top: 1rem; border-top: 1px dashed rgba(215, 121, 132, .45); color: #b97882; font: .58rem var(--mono); letter-spacing: .1em; }
+.public-ticket-note { margin: 1rem 0 0; color: #a89498; text-align: center; font: .68rem var(--mono); line-height: 1.6; }
+.ticket-loading-line { height: 2px; margin-top: 2rem; background: linear-gradient(90deg, transparent, #e23b50, transparent); animation: ticket-pulse 1.2s ease-in-out infinite; }
+@keyframes ticket-pulse { 0%, 100% { opacity: .25; transform: scaleX(.55); } 50% { opacity: 1; transform: scaleX(1); } }
+.ticket-status-valid, .ticket-status-checked-in { color: #c5ff54 !important; }
+.ticket-status-cancelled, .ticket-status-invalidated { color: #ff6b6b !important; }
+.public-ticket-card.is-invalid { border-color: rgba(255, 107, 107, .7); }
+.public-ticket-card.is-invalid h1 { color: #ffc0c0; }
+.public-ticket-card.is-invalid .ticket-occasion { color: #ff6b6b; }
+
+@media (max-width: 600px) {
+  .public-ticket-details { grid-template-columns: 1fr; }
+  .public-ticket-card h1 { margin-top: 2.2rem; }
+  .admin-booking-actions { align-items: stretch; }
+}
+
+@media (min-width: 700px) {
+  .public-ticket-page { padding: 3rem 2rem; }
+  .public-ticket-card { padding: 2.2rem; }
+}

@@ -1,0 +1,15 @@
+:root {
+  --ink: #080811;
+  --surface: #111120;
+  --surface-raised: #19182d;
+  --text: #f7f5ff;
+  --muted: #aaa7c0;
+  --purple: #b66bff;
+  --cyan: #00d9ff;
+  --pink: #ff4fa3;
+  --lime: #c5ff54;
+  --line: rgba(247, 245, 255, 0.15);
+  --display: 'Syne', sans-serif;
+  --body: 'Space Grotesk', sans-serif;
+  --mono: 'IBM Plex Mono', monospace;
+}

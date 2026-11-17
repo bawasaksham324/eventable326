@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="360" viewBox="0 0 1200 360" role="img" aria-label="EVENTABLE">
+<defs>
+  <linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#B66BFF"/><stop offset="0.48" stop-color="#00D9FF"/><stop offset="1" stop-color="#FF4FA3"/></linearGradient>
+  <filter id="glow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="12" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+</defs>
+<rect width="1200" height="360" rx="44" fill="#090914"/>
+<g transform="translate(68 70)">
+ <path d="M0 42 L44 0 L88 42 L44 84 Z" fill="none" stroke="url(#g)" stroke-width="9" filter="url(#glow)"/>
+ <path d="M44 18 L44 66 M20 42 L68 42" stroke="#F7F5FF" stroke-width="7" stroke-linecap="round"/>
+ <circle cx="44" cy="42" r="7" fill="#C5FF54"/>
+</g>
+<text x="190" y="166" font-family="Syne, Arial, sans-serif" font-size="112" font-weight="800" letter-spacing="-5" fill="#F7F5FF">EVENTABLE</text>
+<circle cx="1035" cy="145" r="9" fill="url(#g)"/>
+<text x="198" y="235" font-family="Space Grotesk, Arial, sans-serif" font-size="32" font-weight="500" letter-spacing="7" fill="#BDB9D3">ALL SET. GO TOGETHER.</text>
+<path d="M198 276 H1048" stroke="url(#g)" stroke-width="3" opacity=".8"/>
+</svg>
